@@ -229,6 +229,13 @@ services:
         backend:
           aliases:
             - 'api-fs.docker.kkday.com'
+            - "be2api.docker.kkday.com"
+            - "be2.docker.kkday.com"
+            - "promotion-notification.docker.kkday.com"
+            - "affiliate-api.docker.kkday.com"
+            - "gm-be.docker.kkday.com"
+            - "marketing-api.docker.kkday.com"
+            - "member-api.docker.kkday.com"
 
 ### Blackfire ########################################
     blackfire:

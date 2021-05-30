@@ -55,6 +55,19 @@ RUN if [ ${INSTALL_PHPREDIS} = true ]; then \
 ;fi
 
 ###########################################################################
+# PHP XDEBUG EXTENSION
+###########################################################################
+
+ARG INSTALL_XDEBUG=false
+
+RUN if [ ${INSTALL_XDEBUG} = true ]; then \
+    pecl install xdebug \
+    && docker-php-ext-enable xdebug \
+;fi
+
+COPY ./xdebug3.ini /usr/local/etc/php/conf.d/docker-php-ext-xdebug.ini
+
+###########################################################################
 # Check PHP version:
 ###########################################################################
 

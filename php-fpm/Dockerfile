@@ -55,6 +55,17 @@ RUN if [ ${INSTALL_PHPREDIS} = true ]; then \
 ;fi
 
 ###########################################################################
+# PHP BCMATH EXTENSION
+###########################################################################
+
+ARG INSTALL_BCMATH=false
+
+RUN if [ ${INSTALL_BCMATH} = true ]; then \
+    docker-php-ext-install bcmath \
+    && docker-php-ext-enable bcmath \
+;fi
+
+###########################################################################
 # PHP XDEBUG EXTENSION
 ###########################################################################
 
